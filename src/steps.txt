@@ -1,0 +1,16 @@
+- Instalar material
+- Importar toolbar en app.html y añadimos botón que abrirá un modal con el form
+- Crear componente para el formulario (emp-add-edit) con form-field. Añadir botones cancel y ngSubmit
+- Asignar componente a matDialog (model), desde el AppComponent
+- Crear formulario en html
+- Crear formGroup en (emp-add-edit.ts)
+- Asociar los campos del form con el ts (formControlName, [FormGrup] (ngSubmit))
+- Crear método para enviar datos y llamar método delde el form (ngSumbmit)
+- Asignar type"submit" al botón save
+- Crear método para el botón cancel
+
+- Crear backend
+- Instalar npm i -g json-server
+- Ejecutar json-server --watch db.json para crer el archivo db.json
+- Crear servicio  e importar HTTPClientModule
+-
