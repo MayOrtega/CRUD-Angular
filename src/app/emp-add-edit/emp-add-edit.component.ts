@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule } from '@angular/forms';
+import { EmployeesService } from '../services/employees.service';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { inject } from '@angular/core/testing';
+
+
 
 @Component({
   selector: 'app-emp-add-edit',
@@ -20,7 +25,14 @@ export class EmpAddEditComponent {
 
   ]
 
-  constructor(private _fb:FormBuilder){
+  constructor(
+     private _fb:FormBuilder,
+     private _empService: EmployeesService,
+     private _dialogRef:MatDialogRef<EmpAddEditComponent>,
+     @inject(MAT_DIALOG_DATA) private data: any
+    ){
+
+
     this.empForm = this._fb.group({
       firstName: '',
       lastName:'',
@@ -31,13 +43,23 @@ export class EmpAddEditComponent {
       company:'',
       experience:'',
       package:'',
+
     })
   }
 
  onFormSubmit(){
     if(this.empForm.valid){
-      console.log(this.empForm.value);
+      this._empService.addEmployee(this.empForm.value).subscribe({
+        next: (val:any) => {
+          alert('Employy added succesfully');
+          this._dialogRef.close(true);
 
+        },
+        error: (err: any) => {
+          console.error(err);
+
+        }
+      })
     }
   }
 
