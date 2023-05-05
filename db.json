@@ -26,8 +26,20 @@
       "education": "Diploma",
       "company": "NTT",
       "experience": 3,
-      "package": 3,
+      "package": 3000,
       "id": 4
+    },
+    {
+      "firstName": "aaa",
+      "lastName": "aa",
+      "email": "aa",
+      "dob": "2023-05-22T04:00:00.000Z",
+      "gender": "",
+      "education": "Graduate",
+      "area": "aa",
+      "experience": 1,
+      "salary": 5,
+      "id": 5
     }
   ]
 }
