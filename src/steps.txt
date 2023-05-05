@@ -84,5 +84,13 @@
 
 - Crear método para editar
 Para ello usaremos un @inject(MAT_DIALOG_DATA) private data:any. Esto se injecta  en el constructor del emp-add-edit-component.ts)
+Crear evento desde el botón (click)="metodo(row.data)"
+
+- Implementar ngOnInit en emp-add-edit-component.ts para recibir la data que modificaremos
+- Y el texto del botón save debe modificarse por {{data ? 'Update': 'Save'}} (Aquí no va a modificar los datos aún)
+Debemos crear la condición dentro del método onFormSubmit y crear el metrodo update en el servicio
+Funciona pero no se actualiza automáticamente
+
+
 
 

@@ -18,20 +18,8 @@
   },
   "employees": [
     {
-      "firstName": "Carolina",
-      "lastName": "Guerre",
-      "email": "carog@123.com",
-      "dob": "1967-06-13T04:00:00.000Z",
-      "gender": "female",
-      "education": "Diploma",
-      "company": "nnt",
-      "experience": 2,
-      "package": 2,
-      "id": 1
-    },
-    {
-      "firstName": "cvcvcv",
-      "lastName": "cvcvcv",
+      "firstName": "Gabriel",
+      "lastName": "López",
       "email": "cvcv",
       "dob": "2023-05-09T04:00:00.000Z",
       "gender": "female",
