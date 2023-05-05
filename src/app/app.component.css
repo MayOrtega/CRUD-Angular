@@ -12,4 +12,9 @@ mat-form-field {
   width: 100%;
 }
 
+.mat-column-email{
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 20% !important;
+}
 
