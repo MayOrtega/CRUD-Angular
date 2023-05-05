@@ -5,12 +5,84 @@
 - Crear formulario en html
 - Crear formGroup en (emp-add-edit.ts)
 - Asociar los campos del form con el ts (formControlName, [FormGrup] (ngSubmit))
-- Crear método para enviar datos y llamar método delde el form (ngSumbmit)
+- Crear método (onFormSubmit)para enviar datos y llamar método del form (ngSumbmit)
 - Asignar type"submit" al botón save
-- Crear método para el botón cancel
+- Crear método para el botón cancel. Añadir type="button" [mat-dialog-close]="false"
 
 - Crear backend
 - Instalar npm i -g json-server
 - Ejecutar json-server --watch db.json para crer el archivo db.json
-- Crear servicio  e importar HTTPClientModule
--
+- Crear servicio, importar HttpClientModule e inyectarlo en el servicio
+- Crear método post con la URL del backend y usar observable (método addEmployee)
+- Inyectar servicio también en el ts del componente (en el constructor)
+- Modificar método onFormSubmit reemplazando el console.log por:
+
+          this._empService.addEmployee(this.empForm.value).subscribe({
+            next: (val:any) => {
+              alert('Employy added succesfully');
+              this._dialogRef.close();
+
+            },
+            error: (err: any) => {
+              console.error(err);
+
+            }
+          })
+- Inyectar 'private _dialogRef:DialogRef<EmpAddEditComponent>' en el constructor
+ - Ir al servicio y crear método para pintar(getEmployeeList).
+ - Inyectar el servicio en el app.ts y crear método ahí mismo:
+      getEmployeeList(){
+    this._empService.getEmployeeList().subscribe({
+      next: (res)=>{
+       this.dataSource = new MatTableDataSource(res)
+        this.dataSource.sort = this.sort
+        this.dataSource.paginator = this.paginator
+      },
+      error: (err)=>{
+          console.log(err);
+
+      }
+    })
+
+  -Implementar OnInit en app.ts y dentro del método OnInit invocamos al metodo getEmployeeList
+
+  //Imprimir información en pantalla
+  - Importar table de material al module e importar componentes material del ts(de la tabla) en el component.ts y allí añadir ViewChild e importar
+  displayedColumns, dataSource, @ViewChild @Viewchild
+  Se modifica todo así:
+  displayedColumns: string[] = ['id',
+  'firstName',
+  'lastName',
+  'email',
+  'dob',
+   'education',
+   'company',
+   'experience',
+   'package',
+  ];
+  dataSource!: MatTableDataSource<any>;
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+
+- Copiar método filtro de MatTableDataSource (applyfilter)
+- Copiar el HTML de MatTableDataSource y pegarlo en app.html
+- Modificar campos
+- Crear Método delete en el servicio y luego desde el ts invocando método get creado para refresh
+- Ahora tenemos que establecer comunicación entre componente para refrescar la información despúes de agregar un new employee.
+   Para esto ir al método openAddEditEmpForm y modificar así el código
+
+   openAddEditEmpForm(){
+    const dialogRef = this._dialog.open(EmpAddEditComponent);
+    dialogRef.afterClosed().subscribe({
+      next: (val) => {
+        if (val){
+          this.getEmployeeList();
+        }
+      }
+    })
+
+- Crear método para editar
+Para ello usaremos un @inject(MAT_DIALOG_DATA) private data:any. Esto se injecta  en el constructor del emp-add-edit-component.ts)
+
+
