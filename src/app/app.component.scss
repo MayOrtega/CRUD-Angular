@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400;1,500&display=swap');
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.main-body{
+  padding-top: 20px;
+  margin: 0 auto;
+  max-width: 1248px;
+
+}
+
+mat-form-field {
+  width: 100%;
+  height:75px;
+}
+
+.mat-column-email{
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 15% !important;
+}
+
+mat-header-cell, mat-cell {
+  justify-content: justify;
+}
+
+.mat-toolbar-single-row{
+  background-color: #4C87AA;
+  color: #eff6fa;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2vw;
+}
+
+mat-table{
+  background-color: #fcfcfc;
+  padding-top: 20px;
+}
+
+.mat-mdc-icon-button.mat-primary{
+  color: #4C87AA;
+}
+
+.mat-mdc-icon-button.mat-warn {
+  --mdc-icon-button-icon-color: #f07726;
+}
+
+.mat-mdc-paginator {
+  background:#A2C6DE;
+  color: #fcfcfc;
+}
+
+
