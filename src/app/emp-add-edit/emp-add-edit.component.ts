@@ -17,10 +17,8 @@ export class EmpAddEditComponent implements OnInit {
   empForm: FormGroup;
 
   education: string[] = [
-    'B.S. in Computer Science',
-    'M.S. in Computer Science',
-    'Intermediate',
-    'Diploma',
+    'Student',
+    'Practicing',
     'Graduate',
     'Post-Graduate'
 
@@ -43,9 +41,9 @@ export class EmpAddEditComponent implements OnInit {
       dob:'',
       gender:'',
       education:'',
-      company:'',
+      area:'',
       experience:'',
-      package:'',
+      salary:'',
 
     })
   }

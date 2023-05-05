@@ -5,13 +5,12 @@ import { EmployeesService } from './services/employees.service';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
-import { DialogRef } from '@angular/cdk/dialog';
 import { CoreeService } from './core/coree.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
 
@@ -21,9 +20,9 @@ export class AppComponent implements OnInit{
   'email',
   'dob',
    'education',
-   'company',
+   'area',
    'experience',
-   'package',
+   'salary',
    'action'
   ];
   dataSource!: MatTableDataSource<any>;
