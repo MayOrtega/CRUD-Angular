@@ -18,16 +18,16 @@
   },
   "employees": [
     {
-      "firstName": "Gabriel",
-      "lastName": "López",
-      "email": "cvcv",
-      "dob": "2023-05-09T04:00:00.000Z",
-      "gender": "female",
-      "education": "Graduate",
-      "company": "cgcgcfg",
-      "experience": 2,
-      "package": 2,
-      "id": 2
+      "firstName": "May",
+      "lastName": "Ortega",
+      "email": "may@gmail.com",
+      "dob": "2036-05-21T04:00:00.000Z",
+      "gender": "",
+      "education": "Diploma",
+      "company": "NTT",
+      "experience": 3,
+      "package": 3,
+      "id": 4
     }
   ]
 }

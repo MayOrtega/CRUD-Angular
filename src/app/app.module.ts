@@ -22,10 +22,13 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    EmpAddEditComponent
+    EmpAddEditComponent,
+
   ],
   imports: [
     BrowserModule,
