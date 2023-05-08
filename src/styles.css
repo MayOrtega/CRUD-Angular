@@ -1,9 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400;1,500&display=swap');
+
 
 html, body {
    height: 100%;
   background-image: url('./assets/17545.jpg');
+  background-repeat: no-repeat;
   background-size: contain;
  }
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0;
+  font-family: 'Poppins', sans-serif; }
+
+
+  .mat-mdc-snack-bar-container {
+    --mat-mdc-snack-bar-button-color: #f8c2a6;
+    --mdc-snackbar-container-color: #4e4e50;
+    --mdc-snackbar-supporting-text-color: rgba(255, 255, 255, 0.87);
+    --mdc-snackbar-supporting-text-font: Roboto, sans-serif;
+    --mdc-snackbar-supporting-text-line-height: 20px;
+    --mdc-snackbar-supporting-text-size: 16px;
+    --mdc-snackbar-supporting-text-weight: 400;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+
