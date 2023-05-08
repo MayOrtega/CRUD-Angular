@@ -4,16 +4,26 @@
 
 <form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
 <div mat-dialog-content class="content">
+
   <div class="row">
   <mat-form-field appearance="outline">
     <mat-label>First Name</mat-label>
-    <input matInput type="text" placeholder="Juanita" formControlName="firstName">
+    <input matInput type="text" placeholder="Grace" formControlName="firstName">
   </mat-form-field>
   <mat-form-field appearance="outline">
     <mat-label>Last Name</mat-label>
-    <input matInput type="text" placeholder="Rojas" formControlName="lastName">
+    <input matInput type="text" placeholder="Hopper" formControlName="lastName">
+    <div>
+      <!-- <p *ngIf="empForm.get('lastName').errors">
+        <small *ngIf="empForm.get('lastName').hasError('required')">El campo es requerido</small>
+      </p> -->
+      <!-- <p *ngIf="empForm.get('lastName').errors && empForm.get('lastName').dirty">
+        <small *ngIf="empForm.get('lastName').hasError('required')">El campo es requerido</small>
+      </p> -->
+    </div>
   </mat-form-field>
- </div>
+   </div>
+
 
  <div class="row">
   <mat-form-field appearance="outline">
@@ -21,7 +31,7 @@
     <input matInput type="email" placeholder="123@123.com" formControlName="email">
   </mat-form-field>
   <mat-form-field appearance="outline">
-    <mat-label>Date of Birth</mat-label>
+    <mat-label>Date of Enrollment</mat-label>
     <input matInput [matDatepicker]="picker" formControlName="dob">
     <mat-hint>MM/DD/YYYY</mat-hint>
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
@@ -47,23 +57,21 @@
     </mat-option>
   </mat-select>
 </mat-form-field>
-
 <mat-form-field appearance="outline">
-  <mat-label>Area</mat-label>
-  <input matInput placeholder="Banco" formControlName="area">
+  <mat-label>Salary</mat-label>
+  <input matInput placeholder="2.000" type="number" formControlName="salary">
+  <mat-hint>(Dollars)</mat-hint>
 </mat-form-field>
+
+
 </div>
 
 <div class="row">
   <mat-form-field appearance="outline">
-    <mat-label>Experience</mat-label>
-    <input matInput placeholder="12" type="number" formControlName="experience">
+    <mat-label>Area</mat-label>
+    <input matInput placeholder="Banco" formControlName="area">
   </mat-form-field>
-  <mat-form-field appearance="outline">
-    <mat-label>Salary</mat-label>
-    <input matInput placeholder="2.000" type="number" formControlName="salary">
-    <mat-hint>(Dollars)</mat-hint>
-  </mat-form-field>
+
 </div>
 </div>
 

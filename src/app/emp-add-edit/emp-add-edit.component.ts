@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, FormsModule, Validators } from '@angular/forms';
 import { EmployeesService } from '../services/employees.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { CoreeService } from '../core/coree.service';
@@ -10,7 +10,7 @@ import { CoreeService } from '../core/coree.service';
 @Component({
   selector: 'app-emp-add-edit',
   templateUrl: './emp-add-edit.component.html',
-  styleUrls: ['./emp-add-edit.component.css']
+  styleUrls: ['./emp-add-edit.component.scss']
 })
 export class EmpAddEditComponent implements OnInit {
 
@@ -35,15 +35,14 @@ export class EmpAddEditComponent implements OnInit {
 
 
     this.empForm = this._fb.group({
-      firstName: '',
-      lastName:'',
-      email: '',
+      firstName: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(10)]),
+      lastName:new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(10)]),
+      email: ['', [Validators.required, Validators.email]],
       dob:'',
-      gender:'',
-      education:'',
-      area:'',
-      experience:'',
-      salary:'',
+      gender:new FormControl('', [Validators.required]),
+      education:new FormControl('', [Validators.required]),
+      area:new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(10)]),
+      salary:new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(10)]),
 
     })
   }
