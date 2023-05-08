@@ -75,7 +75,7 @@ export class AppComponent implements OnInit{
   deleteEmployee(id: number){
     this._empService.deleteEmployee(id).subscribe({
       next: (res) => {
-        this._coreServices.openSnackBar('Employee deleted!', 'done')
+        this._coreServices.openSnackBar('Employee deleted!', 'Done')
         this.getEmployeeList();
       },
       error: console.log

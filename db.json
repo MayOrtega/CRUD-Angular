@@ -18,28 +18,81 @@
   },
   "employees": [
     {
-      "firstName": "May",
-      "lastName": "Ortega",
-      "email": "may@gmail.com",
-      "dob": "2036-05-21T04:00:00.000Z",
-      "gender": "",
-      "education": "Diploma",
-      "company": "NTT",
-      "experience": 3,
-      "package": 3000,
-      "id": 4
+      "firstName": "Ada",
+      "lastName": "Lovelace",
+      "email": "al@gmail.com",
+      "dob": "2001-05-08T04:00:00.000Z",
+      "gender": "female",
+      "education": "Graduate",
+      "area": "IT",
+      "salary": 250000,
+      "id": 5
     },
     {
-      "firstName": "aaa",
-      "lastName": "aa",
-      "email": "aa",
-      "dob": "2023-05-22T04:00:00.000Z",
-      "gender": "",
+      "firstName": "Juan ",
+      "lastName": "Bodoque",
+      "email": "juancarlos@gmail.com",
+      "dob": "1998-04-12T04:00:00.000Z",
+      "gender": "other",
+      "education": "Practicing",
+      "area": "Press",
+      "salary": 1000,
+      "id": 6
+    },
+    {
+      "firstName": "Darth",
+      "lastName": "Vader",
+      "email": "yosoytupadre@gmail.com",
+      "dob": "1988-06-18T04:00:00.000Z",
+      "gender": "male",
+      "education": "Practicing",
+      "area": "Dark Side",
+      "salary": 40000,
+      "id": 7
+    },
+    {
+      "firstName": "Leia ",
+      "lastName": "Organa",
+      "email": "leia@starwars.com",
+      "dob": "2023-05-16T04:00:00.000Z",
+      "gender": "female",
+      "education": "Post-Graduate",
+      "area": "Star Wars",
+      "salary": 1500,
+      "id": 8
+    },
+    {
+      "firstName": "Conde",
+      "lastName": "Drácula",
+      "email": "dracula@got.com",
+      "dob": "2023-05-09T04:00:00.000Z",
+      "gender": "male",
       "education": "Graduate",
-      "area": "aa",
-      "experience": 1,
-      "salary": 5,
-      "id": 5
+      "area": "Vampires",
+      "salary": 58000,
+      "id": 9
+    },
+    {
+      "firstName": "Arya",
+      "lastName": "Stark",
+      "email": "arya@got.com",
+      "dob": "2024-02-06T03:00:00.000Z",
+      "gender": "female",
+      "education": "Graduate",
+      "area": "Revenge",
+      "salary": 5000,
+      "id": 10
+    },
+    {
+      "firstName": "Grace",
+      "lastName": "Hopper",
+      "email": "gh@grace.com",
+      "dob": "2023-05-16T04:00:00.000Z",
+      "gender": "female",
+      "education": "Graduate",
+      "area": "Tech",
+      "salary": 2000,
+      "id": 13
     }
   ]
 }

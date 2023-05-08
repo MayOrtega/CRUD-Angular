@@ -63,7 +63,7 @@
 
       <ng-container matColumnDef="package">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Package </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.package | currency }} </mat-cell>
+        <mat-cell *matCellDef="let row"> {{row.salary | currency }} </mat-cell>
       </ng-container>
 
       <ng-container matColumnDef="action">
