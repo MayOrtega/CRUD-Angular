@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
 
 .example-spacer {
   flex: 1 1 auto;
@@ -12,12 +12,14 @@
 }
 
 mat-form-field {
-  width: 100%;
-  height:75px;
+  width: 40%;
+  height:70px;
+
 }
 
+
 .mat-column-email{
-  word-wrap: break-word !important;
+  flex-wrap: nowrap;
   white-space: unset !important;
   flex: 0 0 15% !important;
 }
@@ -27,28 +29,60 @@ mat-header-cell, mat-cell {
 }
 
 .mat-toolbar-single-row{
-  background-color: #4C87AA;
-  color: #eff6fa;
+  background-color: #2F77FB;
+  color: #f8c2a6;
   font-family: 'Poppins', sans-serif;
-  font-size: 2vw;
+  font-size: 2.5vw;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 mat-table{
   background-color: #fcfcfc;
   padding-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+mat-paginator{
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 2px 2px;
 }
 
 .mat-mdc-icon-button.mat-primary{
-  color: #4C87AA;
+  color: #2F77FB;
 }
 
 .mat-mdc-icon-button.mat-warn {
-  --mdc-icon-button-icon-color: #f07726;
+  --mdc-icon-button-icon-color: #f66110;
 }
 
 .mat-mdc-paginator {
-  background:#A2C6DE;
-  color: #fcfcfc;
+  background:#f8c2a6;
+  font-weight: 500;
 }
+
+.mat-mdc-raised-button.mat-unthemed {
+  --mdc-protected-button-container-color: #fff;
+  --mdc-protected-button-label-text-color: #4e4d4d;
+  border:  #f66110 solid 1px;
+}
+
+.mdc-data-table__header-cell {
+  color: #0040c0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.mdc-data-table__pagination-total, .mdc-data-table__pagination-rows-per-page-label, .mdc-data-table__cell {
+  color: rgb(93, 92, 92);
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 540;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: rgb(178, 117, 117);
+}
+
+
 
 
